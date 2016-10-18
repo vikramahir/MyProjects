@@ -1,0 +1,319 @@
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_bm_"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.vikram.mbapp.BM_Activity"
+    android:orientation="vertical"
+    android:background="@color/colorPrimaryDark"
+    android:backgroundTintMode="src_atop">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/etArray"
+        android:hint="Enter Your Array Size :"
+        android:fontFamily="monospace"
+        android:textColor="#f092b0"/>
+
+    <TextView
+        android:text="Choose Complexity "
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvChoose"
+        tools:text="Choose Complexity :"
+        android:textSize="24sp"
+        android:fontFamily="cursive"
+        android:textColor="#f092b0"/>
+<RadioGroup
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/rbtnGroup">
+    <RadioButton
+        android:text="Best Case."
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rbtnBest"
+        android:fontFamily="cursive"
+        android:textSize="18sp"
+        android:onClick="doGenerate" />
+
+    <RadioButton
+        android:text="Average Case."
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rbtnAvg"
+        android:textSize="18sp"
+        android:fontFamily="cursive"
+        android:checked="true"
+        android:onClick="doGenerate"/>
+
+    <RadioButton
+        android:text="Worst Case."
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rbtnWorst"
+        android:textSize="18sp"
+        android:fontFamily="cursive"
+        android:onClick="doGenerate" />
+</RadioGroup>
+
+    <ToggleButton
+        android:text="ToggleButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnToggel"
+        android:textOn="Visible"
+        android:textOff="Click Me"
+       android:onClick="doClick"/>
+
+
+    <TextView
+        android:hint="Which Array You Select"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvCase"
+        android:textStyle="normal|bold|italic"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:fontFamily="monospace"
+        android:textAppearance="?android:textAppearanceLarge"
+        android:visibility="gone"/>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/layout0"
+        android:visibility="gone">
+
+        <TextView
+            android:text="Select  Algorithm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvAlgorithm"
+            android:textStyle="normal|bold|italic"
+            android:textAlignment="center"
+            android:fontFamily="monospace"
+            android:textSize="18sp"
+            android:textColor="#f092b0"/>
+
+        <TextView
+            android:text="Time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvTime"
+            android:textStyle="normal|bold|italic"
+            android:textAlignment="center"
+            android:fontFamily="monospace"
+            android:textSize="14sp"
+            android:textColor="#f092b0"/>
+    </LinearLayout>
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/layout1"
+        android:visibility="gone">
+
+
+        <Button
+            android:text="Bubble Sort"
+            android:layout_width="165dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnBuuble"
+            android:onClick="doAlgorithms"
+            android:visibility="visible"
+            android:fontFamily="cursive"
+            android:textStyle="normal|bold|italic"
+            android:textAlignment="center"
+            android:textColor="@android:color/holo_red_dark" />
+
+        <TextView
+            android:hint="Time Taken "
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:id="@+id/tvBubbleTime"
+            android:textStyle="normal|bold|italic"
+            android:fontFamily="monospace"
+            android:layout_toRightOf="@+id/btnBuuble"
+            android:layout_toEndOf="@+id/btnBuuble"
+            android:layout_marginTop="15dp"
+            android:textSize="18sp"
+            android:textColor="@color/colorAccent"
+            android:layout_marginLeft="60dp"/>
+
+
+        <Button
+            android:text="Selection Sort"
+            android:layout_width="165dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnSelection"
+            android:textSize="14sp"
+            android:textStyle="normal|bold|italic"
+            android:fontFamily="monospace"
+            android:onClick="doAlgorithms"
+            android:layout_marginTop="50dp"
+            android:textColor="@android:color/holo_red_dark" />
+
+        <TextView
+            android:hint="Time Taken "
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:id="@+id/tvSelectionTime"
+            android:textStyle="normal|bold|italic"
+            android:fontFamily="monospace"
+            android:layout_marginTop="60dp"
+            android:layout_toRightOf="@+id/btnSelection"
+            android:layout_toEndOf="@+id/btnSelection"
+            android:textSize="18sp"
+           android:layout_marginLeft="60dp"
+            android:textColor="@color/colorAccent" />
+
+
+        <TextView
+            android:hint="Time Taken"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:id="@+id/tvMergeTime"
+            android:textStyle="normal|bold|italic"
+            android:fontFamily="monospace"
+            android:layout_marginTop="105dp"
+            android:layout_toRightOf="@+id/btnMerge"
+            android:layout_toEndOf="@+id/btnMerge"
+            android:textSize="18sp"
+            android:textColor="@color/colorAccent"
+            android:layout_marginLeft="60dp"/>
+
+
+
+        <Button
+            android:text="Radix Sort"
+            android:layout_width="165dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnRadix"
+            android:textSize="14sp"
+            android:textStyle="normal|bold|italic"
+            android:fontFamily="monospace"
+            android:onClick="doAlgorithms"
+            android:layout_marginTop="150dp"
+            android:textAlignment="center"
+            android:textColor="@android:color/holo_red_dark" />
+
+        <TextView
+            android:hint="Time Taken "
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:id="@+id/tvRadixTime"
+            android:textStyle="normal|bold|italic"
+            android:fontFamily="monospace"
+            android:layout_marginTop="155dp"
+            android:layout_toRightOf="@+id/btnRadix"
+            android:layout_alignBottom="@+id/btnRadix"
+            android:layout_marginLeft="60dp"
+            android:textSize="18sp"
+            android:textColor="@color/colorAccent"
+            />
+
+
+        <Button
+            android:text="Heap Sort"
+            android:layout_width="165dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnHeap"
+            android:textSize="14sp"
+            android:textStyle="normal|bold|italic"
+            android:fontFamily="monospace"
+            android:onClick="doAlgorithms"
+            android:layout_marginTop="200dp"
+            android:textAlignment="center"
+            android:textColor="@android:color/holo_red_dark" />
+
+        <TextView
+            android:hint="Time Taken "
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:id="@+id/tvHeapTime"
+            android:textStyle="normal|bold|italic"
+            android:fontFamily="monospace"
+            android:layout_marginTop="210dp"
+            android:layout_toRightOf="@+id/btnRadix"
+            android:layout_toEndOf="@+id/btnRadix"
+            android:textSize="18sp"
+           android:layout_marginLeft="60dp"
+            android:textColor="@color/colorAccent" />
+
+
+
+        <Button
+            android:text="Bucket Sort"
+            android:layout_width="165dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnBuket"
+            android:textSize="14sp"
+            android:textStyle="normal|bold|italic"
+            android:fontFamily="monospace"
+            android:onClick="doAlgorithms"
+            android:layout_marginTop="250dp"
+            android:textAlignment="center"
+            android:textColor="@android:color/holo_red_dark" />
+
+        <TextView
+            android:hint="Time Taken "
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:id="@+id/tvBuketTime"
+            android:textStyle="normal|bold|italic"
+           android:layout_marginLeft="60dp"
+            android:fontFamily="monospace"
+            android:layout_marginTop="260dp"
+            android:layout_toRightOf="@+id/btnBuket"
+            android:layout_toEndOf="@+id/btnBuket"
+            android:textSize="18sp"
+            android:textColor="@color/colorAccent" />
+
+        <Button
+            android:text="Merge Sort"
+            android:layout_width="165dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnMerge"
+            android:textSize="14sp"
+            android:textStyle="normal|bold|italic"
+            android:fontFamily="monospace"
+            android:onClick="doAlgorithms"
+            android:layout_below="@+id/tvSelectionTime"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:textColor="@android:color/holo_red_dark" />
+
+        <Button
+            android:text="All"
+            android:layout_width="165dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnAll"
+            android:textSize="14sp"
+            android:fontFamily="monospace"
+            android:onClick="doAlgorithms"
+            android:textStyle="normal|bold|italic"
+            android:textAlignment="center"
+            android:textColor="@android:color/holo_red_dark"
+            android:layout_below="@+id/btnBuket"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+
+    </RelativeLayout>
+</ScrollView>
+
+
+</LinearLayout>

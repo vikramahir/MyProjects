@@ -14,7 +14,6 @@ import android.widget.ToggleButton;
 import com.example.vikram.mbapp.Alcorithms.AlgorithmProgram;
 
 public class BM_Activity extends AppCompatActivity {
-
     private EditText editText;
     private TextView textView1, textView2, textView3,tvCase,textView5,tvHeap,tvBucket;
     private Button buttonBubble,buttonSelection,buttonMerge,buttonRedix,buttonAll,buttonHeap,buttonBucket;
